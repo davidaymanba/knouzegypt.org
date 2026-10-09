@@ -1,0 +1,37 @@
+/* Secondary school photos, loaded only on the children's page. */
+.secondary-gallery {
+    padding: 0 0 4rem;
+    scroll-margin-top: 100px;
+}
+
+.secondary-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.secondary-photo-grid figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: var(--surface-alt);
+}
+
+.secondary-photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.secondary-photo-grid figcaption {
+    padding: 1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .secondary-photo-grid {
+        grid-template-columns: 1fr;
+    }
+}

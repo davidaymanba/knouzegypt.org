@@ -1,0 +1,59 @@
+/* Styles loaded only by the women's services page. */
+.women-page .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+.women-page .card-image-wrapper {
+    height: auto;
+    aspect-ratio: 3 / 2;
+}
+
+.women-page .card-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.women-page .service-card-modern:hover .card-image-wrapper img {
+    transform: none;
+}
+
+.women-page .card-overlay {
+    display: none;
+}
+
+.women-gallery {
+    padding: 0 0 4rem;
+}
+
+.women-photo-grid {
+    columns: 3;
+    column-gap: 1.25rem;
+}
+
+.women-photo-grid figure {
+    margin: 0 0 1.25rem;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--surface-alt);
+}
+
+.women-photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .women-photo-grid {
+        columns: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .women-photo-grid {
+        columns: 1;
+    }
+}

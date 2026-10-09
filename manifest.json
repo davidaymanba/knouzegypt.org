@@ -1,0 +1,29 @@
+{
+  "name": "كنوز - Knouz Ministry",
+  "short_name": "كنوز",
+  "description": "خدمة إنسانية مسيحية تسعى لتوصيل محبة يسوع العملية واحتضان الأطفال الأيتام والمهمشين في صعيد مصر",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#B99359",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "media/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "media/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["charity", "ministry", "social", "nonprofit"],
+  "scope": "/",
+  "prefer_related_applications": false
+}

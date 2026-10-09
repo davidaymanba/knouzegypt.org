@@ -1,0 +1,77 @@
+/* Matching photo cards for the three ministry services. */
+.services-overview .services-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.services-overview .service-overview-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: var(--card-bg);
+}
+
+.services-overview .service-overview-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.services-overview .service-overview-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.services-overview .service-overview-card .card-icon {
+    flex: none;
+    width: 56px;
+    height: 56px;
+    margin: 0 0 1rem;
+    transform: none;
+}
+
+.services-overview .card-icon i {
+    font-size: 1.5rem;
+}
+
+.services-overview .service-overview-card h3 {
+    margin: 0 0 .65rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--text-dark);
+}
+
+.services-overview .service-overview-card p {
+    margin: 0 0 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.services-overview .card-arrow {
+    margin-top: auto;
+    padding-top: .5rem;
+    animation: none;
+}
+
+@media (max-width: 992px) {
+    .services-overview .services-cards {
+        gap: 1rem;
+    }
+
+    .services-overview .service-overview-body {
+        padding: 1.25rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-overview .services-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
