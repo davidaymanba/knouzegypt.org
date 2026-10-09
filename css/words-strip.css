@@ -1,53 +1,38 @@
-/* Nine word tiles across every viewport, with two identical cycles. */
+/* Words strip: seamless loop, nine tiles visible on mobile like desktop. */
 .partners .logos-strip {
-    container-type: inline-size;
     direction: ltr;
-    --word-gap: clamp(3px, 1cqw, 12px);
 }
 
 .partners .logos-track {
     width: max-content;
     gap: 0;
-    direction: ltr;
-    animation: wordsLoop 18s linear infinite;
+    animation: scrollX 40s linear infinite;
     will-change: transform;
 }
 
-.partners .logos-cycle {
-    display: flex;
-    flex: none;
-    gap: var(--word-gap);
-    padding-right: var(--word-gap);
-}
-
 .partners .logo-item {
-    flex: none;
-    width: calc((100cqw - 9 * var(--word-gap)) / 9);
-    min-width: 0;
-    padding: .5rem 0;
-    border-radius: clamp(5px, 1cqw, 10px);
-    font-size: clamp(9px, 2.3cqw, 18px);
-    line-height: 1.5;
-    white-space: nowrap;
+    margin-right: 2rem;
     unicode-bidi: plaintext;
 }
 
-.partners .logos-strip:hover .logos-track {
-    animation-play-state: running;
-}
+@media (max-width: 768px) {
+    .partners .logos-strip {
+        container-type: inline-size;
+        --word-gap: 6px;
+    }
 
-.partners .logos-strip:focus-within .logos-track {
-    animation-play-state: paused;
-}
+    .partners .logos-track {
+        animation-duration: 20s;
+    }
 
-@keyframes wordsLoop {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .partners .logos-strip:hover .logos-track {
-        animation-play-state: paused;
+    .partners .logo-item {
+        width: calc((100cqw - 8 * var(--word-gap)) / 9);
+        min-width: 0;
+        margin-right: var(--word-gap);
+        padding: .4rem 0;
+        border-radius: 6px;
+        font-size: clamp(8px, 2.5cqw, 14px);
+        white-space: nowrap;
     }
 }
 
